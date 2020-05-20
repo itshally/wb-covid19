@@ -1,0 +1,8 @@
+.formControl{
+    width: auto;
+    max-width: 50vw !important;
+    margin-bottom: 30px !important;
+}
+.formControl select{
+    padding: 10px !important;
+}

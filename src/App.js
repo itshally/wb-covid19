@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./App.module.css";
 import { Cards, Chart, CountryPicker } from "./components";
 import { fetchData } from "./api";
+import Buttons from './components/webmonetize/buttonmonetize'
 
 class App extends React.Component {
   state = {
@@ -32,6 +33,7 @@ class App extends React.Component {
         <Cards data={data} />
         <CountryPicker handleCountryChange={this.handleCountryChange}/>
         <Chart data={data} country={country}/> 
+        <Buttons />
 
       </div>
     );

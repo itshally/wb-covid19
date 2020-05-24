@@ -3,6 +3,7 @@ import styles from "./App.module.css";
 import { Cards, Chart, CountryPicker } from "./components";
 import { fetchData } from "./api";
 import Buttons from './components/webmonetize/buttonmonetize'
+import logo from './images/logo.jpg';
 
 class App extends React.Component {
   state = {
@@ -30,6 +31,7 @@ class App extends React.Component {
 
     return (
       <div className={styles.container}>
+        <img src={logo} alt="logo"/>
         <Cards data={data} />
         <CountryPicker handleCountryChange={this.handleCountryChange}/>
         <Chart data={data} country={country}/> 

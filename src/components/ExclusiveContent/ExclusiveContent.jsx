@@ -65,7 +65,10 @@ export default class ExclusiveContent extends Component {
                 
                 <ul>
                     {
-                        // news.map(x => <li key={x}>{x}</li>)
+                         news.map(x => <li key={x}>{x}</li>) //byt this we are getting news in list format and i tried map data too
+                                  //but it is showing title and link is missing i think your having that code of 
+                                  //you runned for jquery after mounting that code here in componendidmount i am sure that will work if 
+                                  // not then we will work out 
                     }
                 </ul>
                 

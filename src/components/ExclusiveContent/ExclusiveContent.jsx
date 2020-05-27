@@ -26,6 +26,7 @@ export default class ExclusiveContent extends Component {
         .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
         .then(data => {
 
+            // used to web scrape the information needed
             this.setState({ data: 
                 {
                     title: data.querySelectorAll('title'),
@@ -35,61 +36,53 @@ export default class ExclusiveContent extends Component {
                 }
             })
 
-            console.log(this.state.data.description)
             
-            // THIS DISPLAYS THE TITLE ON THE CONSOLE
-            console.log(this.state.data.title[0].innerHTML);
-            console.log(this.state.whoInfo.description)
-            
-            // this.state.whoInfo.forEach((x) => {
-                // this.setState({
-                //     whoInfo: this.state.whoInfo.push(x)
-                // })
-                // this.state.data
-                
-            // })
-            const WHOINFO = this.state.data;
+            // setting an array to be used and displayed on the web page as WHO's web information
+            const DATA = this.state.data;
             this.setState({ whoInfo: 
                 {
-                    title: WHOINFO.title[0].innerHTML,
-                    description: WHOINFO.description[0].innerHTML
+                    title: DATA.title[0].innerHTML,
+                    description: DATA.description[0].innerHTML,
+                    link: DATA.link[0].innerHTML
                 }
             })
 
-            console.log(this.state.whoInfo.description)
-            // console.log(this.state.whoInfo)
-            // this.state.news.forEach( x => {
 
-            //     // console.log(x.innerHTML)
-            //     this.state.news.push(
-            //         x.innerHTML
-            //     )
-
-            // })
+            console.log(DATA.items[0].querySelector('title').innerHTML) //shows the first title
+            console.log(DATA.items.length) //shows 25
+            const NEWS = DATA.items;
+            // for(var x = 0; x <= DATA.items.length; x++){
+                this.setState({ news:
+                    {
+                        title: data.querySelectorAll('item title')
+                    }
+                })  
+    
+            // }
             
+            console.log(this.state.news.title[0].innerHTML)
+
         });
 
 
     }
 
     render(){
-        // const {title, link} = this.state.data;
-        
-        // console.log(this.state.news)
 
-        const { data, whoInfo } = this.state;
-        console.log(whoInfo)
+        const { whoInfo, news } = this.state;
+        // console.log(news.title[0])
         return(
 
             <div>
                 {/* this will be displayed as the WHO's web iformation */}
                 <Container>
-                    {/* { */}
-                        <h1>{whoInfo.title}</h1>
-                        <p>{whoInfo.description}</p>
-                    {/* } */}
+                    <h1>{whoInfo.title}</h1>
+                    <p>{whoInfo.description}</p>
+                    <p>For more information, please visit their official website on this <a href={whoInfo.link}>here</a>. </p>
                 </Container>
 
+                <hr/>
+                {/* below should display all the items, which is the news */}
 
                 <ul>
                     {
@@ -97,9 +90,8 @@ export default class ExclusiveContent extends Component {
                                   //but it is showing title and link is missing i think your having that code of 
                                   //you runned for jquery after mounting that code here in componendidmount i am sure that will work if 
                                   // not then we will work out 
-
-                                //   whoInfo.map(x => <li key={x.title}>{x.title}</li>)
-
+                                //   news.map(x => <li key={x}>{x}</li>)
+                                    
                                 // whoInfo.map((x,i) => console.log( x.link[i]))
                     }
                 </ul>

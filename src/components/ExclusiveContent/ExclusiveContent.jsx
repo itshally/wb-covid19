@@ -8,6 +8,7 @@ export default class ExclusiveContent extends Component {
 
         this.state = {
             data: [],
+            whoInfo: [],
             news: []
         }
     }
@@ -25,50 +26,81 @@ export default class ExclusiveContent extends Component {
         .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
         .then(data => {
 
-            this.setState({data: 
+            this.setState({ data: 
                 {
                     title: data.querySelectorAll('title'),
-                    link: data.querySelectorAll('link')
+                    link: data.querySelectorAll('link'),
+                    description: data.querySelectorAll('description'),
+                    items: data.querySelectorAll('item')
                 }
             })
 
+            console.log(this.state.data.description)
             
             // THIS DISPLAYS THE TITLE ON THE CONSOLE
             console.log(this.state.data.title[0].innerHTML);
-
-            this.state.data.title.forEach( x => {
-
-                // console.log(x.innerHTML)
-                this.state.news.push(
-                    x.innerHTML
-                )
-
+            console.log(this.state.whoInfo.description)
+            
+            // this.state.whoInfo.forEach((x) => {
+                // this.setState({
+                //     whoInfo: this.state.whoInfo.push(x)
+                // })
+                // this.state.data
+                
+            // })
+            const WHOINFO = this.state.data;
+            this.setState({ whoInfo: 
+                {
+                    title: WHOINFO.title[0].innerHTML,
+                    description: WHOINFO.description[0].innerHTML
+                }
             })
 
+            console.log(this.state.whoInfo.description)
+            // console.log(this.state.whoInfo)
+            // this.state.news.forEach( x => {
+
+            //     // console.log(x.innerHTML)
+            //     this.state.news.push(
+            //         x.innerHTML
+            //     )
+
+            // })
             
         });
+
 
     }
 
     render(){
-        const {title, link} = this.state.data;
+        // const {title, link} = this.state.data;
         
-        console.log(this.state.news)
+        // console.log(this.state.news)
 
-        const { news } = this.state;
-        console.log(news)
-
-
+        const { data, whoInfo } = this.state;
+        console.log(whoInfo)
         return(
-            
+
             <div>
-                
+                {/* this will be displayed as the WHO's web iformation */}
+                <Container>
+                    {/* { */}
+                        <h1>{whoInfo.title}</h1>
+                        <p>{whoInfo.description}</p>
+                    {/* } */}
+                </Container>
+
+
                 <ul>
                     {
-                         news.map(x => <li key={x}>{x}</li>) //byt this we are getting news in list format and i tried map data too
+                          //byt this we are getting news in list format and i tried map data too
                                   //but it is showing title and link is missing i think your having that code of 
                                   //you runned for jquery after mounting that code here in componendidmount i am sure that will work if 
                                   // not then we will work out 
+
+                                //   whoInfo.map(x => <li key={x.title}>{x.title}</li>)
+
+                                // whoInfo.map((x,i) => console.log( x.link[i]))
                     }
                 </ul>
                 

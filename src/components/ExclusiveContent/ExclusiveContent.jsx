@@ -50,15 +50,18 @@ export default class ExclusiveContent extends Component {
 
             console.log(DATA.items[0].querySelector('title').innerHTML) //shows the first title
             console.log(DATA.items.length) //shows 25
+
             const NEWS = DATA.items;
-            // for(var x = 0; x <= DATA.items.length; x++){
                 this.setState({ news:
                     {
-                        title: data.querySelectorAll('item title')
+                        id: data.querySelectorAll('item guid'),
+                        title: data.querySelectorAll('item title'),
+                        pubDate: data.querySelectorAll('item pubDate'),
+                        link: data.querySelectorAll('item link'),
+                        description: data.querySelectorAll('item description'),
+                        content: data.querySelectorAll('item content')
                     }
                 })  
-    
-            // }
             
             console.log(this.state.news.title[0].innerHTML)
 
@@ -70,7 +73,7 @@ export default class ExclusiveContent extends Component {
     render(){
 
         const { whoInfo, news } = this.state;
-        // console.log(news.title[0])
+        // console.log(news)
         return(
 
             <div>
@@ -86,13 +89,13 @@ export default class ExclusiveContent extends Component {
 
                 <ul>
                     {
+                        // news.map(x => console.log(x))
                           //byt this we are getting news in list format and i tried map data too
                                   //but it is showing title and link is missing i think your having that code of 
                                   //you runned for jquery after mounting that code here in componendidmount i am sure that will work if 
                                   // not then we will work out 
-                                //   news.map(x => <li key={x}>{x}</li>)
                                     
-                                // whoInfo.map((x,i) => console.log( x.link[i]))
+                                // news.map((x,i) => console.log( x.link[i]))
                     }
                 </ul>
                 

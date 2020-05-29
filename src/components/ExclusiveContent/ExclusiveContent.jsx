@@ -9,6 +9,7 @@ export default class ExclusiveContent extends Component {
         this.state = {
             data: [],
             whoInfo: [],
+            newsSelector: [],
             news: []
         }
     }
@@ -48,11 +49,11 @@ export default class ExclusiveContent extends Component {
             })
 
 
-            console.log(DATA.items[0].querySelector('title').innerHTML) //shows the first title
+            console.log(DATA.items[1].querySelector('title').innerHTML) //shows the first title
             console.log(DATA.items.length) //shows 25
 
-            const NEWS = DATA.items;
-                this.setState({ news:
+            const NEWSDataSelectors = DATA.items;
+                this.setState({ newsSelector:
                     {
                         id: data.querySelectorAll('item guid'),
                         title: data.querySelectorAll('item title'),
@@ -62,8 +63,15 @@ export default class ExclusiveContent extends Component {
                         content: data.querySelectorAll('item content')
                     }
                 })  
+
+            const NEWSData = this.state.newsSelector;
+            this.setState({ news: {
+                title: NEWSData.map(x => title[x].innerHTML)
+                }
+            })
             
-            console.log(this.state.news.title[0].innerHTML)
+            
+            console.log(this.state.newsSelector.title)
 
         });
 
@@ -95,7 +103,8 @@ export default class ExclusiveContent extends Component {
                                   //you runned for jquery after mounting that code here in componendidmount i am sure that will work if 
                                   // not then we will work out 
                                     
-                                // news.map((x,i) => console.log( x.link[i]))
+                                // news.map((x) => console.log( x.title))
+                                // news.title.forEach((x,i) => console.log(x[i]))
                     }
                 </ul>
                 

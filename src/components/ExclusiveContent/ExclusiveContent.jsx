@@ -70,14 +70,14 @@ export default class ExclusiveContent extends Component {
             
             // console.log(this.state.news.title)
             const NEWSTITLE = this.state.news.title;
-            [...this.state.news.title].map(x => this.state.newsData.title.push(x.innerHTML))
+            // const titlee = [...this.state.news.title].map(x => this.state.newsData.title.push(x.innerHTML))
             // this.state.news = ;
             
             // this.state.news.title
-            
+            this.setState({ newsData: {
+                title: [...this.state.news.title].filter(x => this.state.newsData.title.push(x))
+            }})
 
-            // console.log(this.state.newsData.title)
-            // console.log(this.state.news.title)
 
         });
 
@@ -86,8 +86,8 @@ export default class ExclusiveContent extends Component {
 
     render(){
 
-        const { whoInfo, news, newsData } = this.state;
-        console.log(newsData.title)
+        const { whoInfo, newsData } = this.state;
+
         return(
 
             <div>
@@ -110,8 +110,8 @@ export default class ExclusiveContent extends Component {
                                   // not then we will work out 
                                     
                     
-
-                        newsData.title.map(x => <li key={x}>{x}</li>)
+                        // title now shows on the first load of app
+                        newsData.title.map(x => <li key={x.innerHTML}>{x.innerHTML}</li>)
                     }
                 </ul>
                 </Container>

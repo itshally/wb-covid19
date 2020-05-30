@@ -9,8 +9,12 @@ export default class ExclusiveContent extends Component {
         this.state = {
             data: [],
             whoInfo: [],
-            newsSelector: [],
-            news: []
+            news: [],
+            newsData: 
+                {
+                    title: []
+                }
+            
         }
     }
 
@@ -49,11 +53,11 @@ export default class ExclusiveContent extends Component {
             })
 
 
-            console.log(DATA.items[1].querySelector('title').innerHTML) //shows the first title
+            console.log(DATA.items[0].querySelector('title').innerHTML) //shows the first title
             console.log(DATA.items.length) //shows 25
 
-            const NEWSDataSelectors = DATA.items;
-                this.setState({ newsSelector:
+            const NEWS = DATA.items;
+                this.setState({ news:
                     {
                         id: data.querySelectorAll('item guid'),
                         title: data.querySelectorAll('item title'),
@@ -63,15 +67,17 @@ export default class ExclusiveContent extends Component {
                         content: data.querySelectorAll('item content')
                     }
                 })  
+            
+            // console.log(this.state.news.title)
+            const NEWSTITLE = this.state.news.title;
+            [...this.state.news.title].map(x => this.state.newsData.title.push(x.innerHTML))
+            // this.state.news = ;
+            
+            // this.state.news.title
+            
 
-            const NEWSData = this.state.newsSelector;
-            this.setState({ news: {
-                title: NEWSData.map(x => title[x].innerHTML)
-                }
-            })
-            
-            
-            console.log(this.state.newsSelector.title)
+            // console.log(this.state.newsData.title)
+            // console.log(this.state.news.title)
 
         });
 
@@ -80,8 +86,8 @@ export default class ExclusiveContent extends Component {
 
     render(){
 
-        const { whoInfo, news } = this.state;
-        // console.log(news)
+        const { whoInfo, news, newsData } = this.state;
+        console.log(newsData.title)
         return(
 
             <div>
@@ -90,7 +96,7 @@ export default class ExclusiveContent extends Component {
                     <h1>{whoInfo.title}</h1>
                     <p>{whoInfo.description}</p>
                     <p>For more information, please visit their official website on this <a href={whoInfo.link}>here</a>. </p>
-                </Container>
+                
 
                 <hr/>
                 {/* below should display all the items, which is the news */}
@@ -103,11 +109,12 @@ export default class ExclusiveContent extends Component {
                                   //you runned for jquery after mounting that code here in componendidmount i am sure that will work if 
                                   // not then we will work out 
                                     
-                                // news.map((x) => console.log( x.title))
-                                // news.title.forEach((x,i) => console.log(x[i]))
+                    
+
+                        newsData.title.map(x => <li key={x}>{x}</li>)
                     }
                 </ul>
-                
+                </Container>
             </div>
         );
     }

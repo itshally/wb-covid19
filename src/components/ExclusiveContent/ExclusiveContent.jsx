@@ -10,11 +10,7 @@ export default class ExclusiveContent extends Component {
             data: [],
             whoInfo: [],
             news: [],
-            newsData: 
-                {
-                    title: []
-                }
-            
+            newsData: []
         }
     }
 
@@ -53,32 +49,48 @@ export default class ExclusiveContent extends Component {
             })
 
 
-            console.log(DATA.items[0].querySelector('title').innerHTML) //shows the first title
-            console.log(DATA.items.length) //shows 25
+            // this.setState({ news:
+            //     [{
+            //         id: data.querySelectorAll('item guid'),
+            //         title: data.querySelectorAll('item title'),
+            //         pubDate: data.querySelectorAll('item pubDate'),
+            //         link: data.querySelectorAll('item link'),
+            //         description: data.querySelectorAll('item description'),
+            //         content: data.querySelectorAll('item content')
+            //     }]
+            // })  
 
-            const NEWS = DATA.items;
-                this.setState({ news:
-                    {
-                        id: data.querySelectorAll('item guid'),
-                        title: data.querySelectorAll('item title'),
-                        pubDate: data.querySelectorAll('item pubDate'),
-                        link: data.querySelectorAll('item link'),
-                        description: data.querySelectorAll('item description'),
-                        content: data.querySelectorAll('item content')
-                    }
-                })  
+            console.log(this.state.data.items);
+
             
-            // console.log(this.state.news.title)
-            const NEWSTITLE = this.state.news.title;
-            // const titlee = [...this.state.news.title].map(x => this.state.newsData.title.push(x.innerHTML))
-            // this.state.news = ;
             
-            // this.state.news.title
-            this.setState({ newsData: {
-                title: [...this.state.news.title].filter(x => this.state.newsData.title.push(x))
-            }})
+                // this.state.news.forEach(
+                    this.setState({ news: [...this.state.data.items].map( x => 
+                        ({
+                            id: x.querySelector('guid').innerHTML,
+                            title: x.querySelector('title').innerHTML,
+                            pubDate: x.querySelector('pubDate').innerHTML
+                            // link: data.querySelectorAll('item link'),
+                            // description: data.querySelectorAll('item description'),
+                            // content: data.querySelectorAll('item content')
+                        })
+                        
+                        )
+                    })  
+                // )
+            
+            
+            console.log(this.state.news)
+            
 
+            // this.setState({ newsData: {
+            //     id: [...this.state.news.id].filter(x => this.state.newsData.id.push(x)),
+            //     title: [...this.state.news.title].filter(x => this.state.newsData.title.push(x)),
+            //     pubDate: [...this.state.news.pubDate].filter(x => this.state.newsData.pubDate.push(x))
+            // }})
 
+            console.log(this.state.newsData.id)
+            console.log(this.state.newsData.pubDate)
         });
 
 
@@ -86,7 +98,7 @@ export default class ExclusiveContent extends Component {
 
     render(){
 
-        const { whoInfo, newsData } = this.state;
+        const { whoInfo, news } = this.state;
 
         return(
 
@@ -111,7 +123,8 @@ export default class ExclusiveContent extends Component {
                                     
                     
                         // title now shows on the first load of app
-                        newsData.title.map(x => <li key={x.innerHTML}>{x.innerHTML}</li>)
+                        
+                    news.map(x => <li key={x.id}>{x.title} - {x.pubDate}</li>)
                     }
                 </ul>
                 </Container>

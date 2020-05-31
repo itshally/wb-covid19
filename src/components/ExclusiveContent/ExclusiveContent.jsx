@@ -1,6 +1,7 @@
 import React, {Component} from "react";
-import { Container } from "../../../node_modules/@material-ui/core";
-import './ExclusiveContent.module.css'
+import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails, Typography } from "../../../node_modules/@material-ui/core";
+import styles from './ExclusiveContent.module.css'
+
 
 export default class ExclusiveContent extends Component {
     constructor(props){
@@ -101,39 +102,45 @@ export default class ExclusiveContent extends Component {
 
         return(
 
-            <div>
+            <div className={styles.newsContainer}>
                 {/* this will be displayed as the WHO's web iformation */}
-                <Container>
-                    <h1>{whoInfo.title}</h1>
-                    <p>{whoInfo.description}</p>
-                    <p>For more information, please visit their official website on this <a href={whoInfo.link}>here</a>. </p>
-                
+                {/* <Container maxWidth="md"> */}
+                    <div className={styles.newsHeader}>
+                        <h1>{whoInfo.title}</h1>
+                        <p>{whoInfo.description}</p>
+                        <p>For more information, please visit their official website on this <a href={whoInfo.link}>here</a>. </p>
+                    </div>
 
                 <hr/>
-                {/* below should display all the items, which is the news */}
 
-                <ul>
+                {/* below this line will show the result of thew news articles */}
+                <ul className={styles.newsList}>
                     {
-                        // news.map(x => console.log(x))
-                          //byt this we are getting news in list format and i tried map data too
-                                  //but it is showing title and link is missing i think your having that code of 
-                                  //you runned for jquery after mounting that code here in componendidmount i am sure that will work if 
-                                  // not then we will work out 
+                        news.map(x => 
+                            
+                            <div className={styles.newsArticleContainer}>
+                                
+                                <li key={x.id}>
+                                <ExpansionPanel>
+                                    <ExpansionPanelSummary>
+                                        <div className={styles.PanelSummary}>
+                                            <h2 className={styles.newsTitle}>{x.title}</h2> {/* news title */}
+                                            <p>{x.pubDate}</p> {/* published date and time */}    
+                                        </div>
+                                    </ExpansionPanelSummary>
+                                    <ExpansionPanelDetails className={styles.expandedPanel}>
                                     
-                    
-                        // title now shows on the first load of app
-                        
-                    news.map(x => <li key={x.id}>
-                        
-                        <a href={x.link}><h2>{x.title}</h2></a> - {x.pubDate}
-                                {/* {x.description} */}
-                                {/* {console.log(x.description)} */}
-                                <div dangerouslySetInnerHTML={{__html: x.description}}>
-                                </div>
-                        </li>)
+                                    {/* news contents */}
+                                    <div className={styles.newsContent} dangerouslySetInnerHTML={{__html: x.description}}></div>
+                                    </ExpansionPanelDetails>
+                                    
+                                </ExpansionPanel>
+                                </li>
+                            </div>
+                        )
                     }
                 </ul>
-                </Container>
+                {/* </Container> */}
             </div>
         );
     }

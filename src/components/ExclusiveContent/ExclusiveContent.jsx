@@ -60,19 +60,16 @@ export default class ExclusiveContent extends Component {
             //     }]
             // })  
 
-            console.log(this.state.data.items);
-
-            
+            // console.log(this.state.data.items);
             
                 // this.state.news.forEach(
                     this.setState({ news: [...this.state.data.items].map( x => 
                         ({
                             id: x.querySelector('guid').innerHTML,
                             title: x.querySelector('title').innerHTML,
-                            pubDate: x.querySelector('pubDate').innerHTML
-                            // link: data.querySelectorAll('item link'),
-                            // description: data.querySelectorAll('item description'),
-                            // content: data.querySelectorAll('item content')
+                            pubDate: x.querySelector('pubDate').innerHTML,
+                            link: x.querySelector('link').innerHTML,
+                            description: x.querySelector('description').textContent
                         })
                         
                         )
@@ -80,7 +77,7 @@ export default class ExclusiveContent extends Component {
                 // )
             
             
-            console.log(this.state.news)
+            // console.log(this.state.news)
             
 
             // this.setState({ newsData: {
@@ -90,15 +87,17 @@ export default class ExclusiveContent extends Component {
             // }})
 
             console.log(this.state.newsData.id)
-            console.log(this.state.newsData.pubDate)
+            console.log(this.state.news[0].description.textContent)
         });
 
 
     }
 
+   
     render(){
-
+    
         const { whoInfo, news } = this.state;
+        let parser = new DOMParser();
 
         return(
 
@@ -124,7 +123,14 @@ export default class ExclusiveContent extends Component {
                     
                         // title now shows on the first load of app
                         
-                    news.map(x => <li key={x.id}>{x.title} - {x.pubDate}</li>)
+                    news.map(x => <li key={x.id}>
+                        
+                        <a href={x.link}><h2>{x.title}</h2></a> - {x.pubDate}
+                                {/* {x.description} */}
+                                {/* {console.log(x.description)} */}
+                                <div dangerouslySetInnerHTML={{__html: x.description}}>
+                                </div>
+                        </li>)
                     }
                 </ul>
                 </Container>

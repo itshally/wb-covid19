@@ -1,7 +1,7 @@
 .newsContainer{
     margin: auto;
-    padding: 5%;
     padding-bottom: 5%;
+    width: 100%;
 }
 .newsHeader{
     padding-bottom: 5px;
@@ -25,11 +25,11 @@ h1{
   width:auto;
   height:auto;
   box-shadow: 5px 5px 15px rgb(226,233,255,0.6), -5px -5px 15px  rgba(255,255,255, 0.5);
+  font-family: 'Quicksand', sans-serif;
 }
 .PanelSummary{
     text-align: center;
     margin: 1.5% auto;
-    letter-spacing: 1.5px;
 }
 .newsTitle{
     font-family: 'Lora', serif;
@@ -39,7 +39,10 @@ h1{
 .expandedPanel{
     margin: 2% 5%;
 }
-.newsContent, .PanelSummary p{
-    font-family: 'Quicksand', sans-serif;
+.contentContainer{
+    width: 100%;
+}
+.newsContent{
     line-height: 1.8em;
+    width: 100%;
 }

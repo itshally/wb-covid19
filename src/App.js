@@ -29,7 +29,7 @@ class App extends React.Component {
 
     return (
       <div className={styles.container}>
-        <img src={logo} alt="logo"/>
+        <img src={logo} alt="logo" className={styles.logo}/>
         <Cards data={data} />
         <CountryPicker handleCountryChange={this.handleCountryChange}/>
         <Chart data={data} country={country}/> 

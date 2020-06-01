@@ -1,9 +1,17 @@
 body{
-  background-color: #fafcff;
+  background-color: #ffffff;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 .container{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
+}
+.logo{
+  height: 100px !important;
+  width: 100px !important;
 }

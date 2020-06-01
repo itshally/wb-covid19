@@ -129,9 +129,11 @@ export default class ExclusiveContent extends Component {
                                         </div>
                                     </ExpansionPanelSummary>
                                     <ExpansionPanelDetails className={styles.expandedPanel}>
-                                    
-                                    {/* news contents */}
-                                    <div className={styles.newsContent} dangerouslySetInnerHTML={{__html: x.description}}></div>
+                                    <div className={styles.contentContainer}>
+                                        <p>Original Source: Click <a href={x.link}>Here</a></p>
+                                        {/* news contents */}
+                                        <div className={styles.newsContent} dangerouslySetInnerHTML={{__html: x.description}}></div>
+                                    </div>
                                     </ExpansionPanelDetails>
                                     
                                 </ExpansionPanel>

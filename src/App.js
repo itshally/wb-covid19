@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./App.module.css";
-import { Cards, Chart, CountryPicker, ExclusiveContent } from "./components";
+import { Cards, Chart, CountryPicker, ExclusiveContent, Footer } from "./components";
 import { fetchData } from "./api";
 import Buttons from './components/webmonetize/buttonmonetize'
 import logo from './images/logo.jpg';
@@ -35,6 +35,7 @@ class App extends React.Component {
         <Chart data={data} country={country}/> 
         <Buttons />
         <ExclusiveContent />
+        <Footer />
       </div>
     );
   }

@@ -1,12 +1,16 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import '../../wm-app'
+import styles from './buttonmonetize.module.css'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     '& > *': {
       margin: theme.spacing(1),
     },
+    'text-align' : 'center',
+    'padding-top' : '10px'
   },
 }));
 
@@ -15,7 +19,11 @@ export default function Buttons() {
 
   return (
     <div className={classes.root}>
-      <Button variant="contained" id="wmBtnStart">Click For Exclusive Content</Button>
+      <Button variant="contained" id="stop-button">Stop Monetization</Button>
+      <Button variant="contained" id="start-button">Start Monetization</Button>
+      <div id="loading">
+        <p className={styles.loading}>Current Monetization State: <span id="state"></span></p>
+      </div>
     </div>
   );
 }

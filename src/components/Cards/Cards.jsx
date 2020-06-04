@@ -13,7 +13,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
       <Grid container spacing={3} justify="center">
         <Grid
           item
-          xs={12}         
+          xs={10}         
            component={Card}
 
           md={3}
@@ -43,7 +43,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         <Grid
           item
           component={Card}
-          xs={12}
+          xs={10}
           md={3}
           className={cx(styles.card, styles.recovered)}
         >
@@ -72,7 +72,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
         <Grid
           item
           component={Card}
-          xs={12}
+          xs={10}
           md={3}
           className={cx(styles.card, styles.deaths)}
         >

@@ -15,11 +15,7 @@ export default function Buttons() {
 
   return (
     <div className={classes.root}>
-      <Button variant="contained">Click For Exclusive Content</Button>
-      <Button variant="contained" color="primary">
-        About App & Developer's
-      </Button>
-     
+      <Button variant="contained" id="wmBtnStart">Click For Exclusive Content</Button>
     </div>
   );
 }

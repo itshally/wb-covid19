@@ -1,0 +1,20 @@
+.header {
+    width: 100%;
+}
+
+.headerContent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2em;
+}
+
+.logo {
+    height: 85px !important;
+    width: 85px !important;
+    padding: 0 5px;
+}
+
+.h1 {
+    font-family: 'Lora', serif;
+}

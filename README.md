@@ -1,5 +1,5 @@
 <div style="text-align:center" align="center">
-<h1><code>&lt;/🌠&gt;</code>Web-Monetization With COVID-19 Tracker & WHO NEWS API <code>&lt;/💰&gt;</code></h1>
+<h2><code>&lt;/🌠&gt;</code>Web-Monetization With COVID-19 Tracker & WHO NEWS API <code>&lt;/💰&gt;</code></h2>
 
 
 //remaining docu

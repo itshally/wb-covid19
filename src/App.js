@@ -33,7 +33,7 @@ class App extends React.Component {
         <Chart data={data} country={country}/> 
         <Buttons />
         <div className={styles.exclusiveContainer}>
-          <div id="exclusive" className={styles.hidden}>
+          <div id="exclusive" className="hidden">
             <ExclusiveContent /> 
           </div>
         </div>

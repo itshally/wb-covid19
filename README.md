@@ -1,8 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div style="text-align:center" align="center">
+<h1><code>&lt;/🌠&gt;</code>Web-Monetization With COVID-19 Tracker & WHO NEWS API <code>&lt;/💰&gt;</code></h1>
 
-## Available Scripts
 
-In the project directory, you can run:
+//remaining docu
+
+
+
+
+</div>
+
+## Live Preview⤵
+
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Authors
+
+* **Harriette Bianan** - [itshally](https://itshally.netlify.app/)
+* **Krishna kakade**  - [krishnadevz](https://github.com/krishnadevz)
+
+
+# In the project directory, you can run following commands⤵
 
 ### `npm start`
 
@@ -27,10 +51,3 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)

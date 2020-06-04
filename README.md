@@ -22,8 +22,8 @@ Please make sure to update tests as appropriate.
 ## Contributors
 <table>
   <tr>
-    <td align="center"><a href="https://kentcdodds.com"><img src="https://avatars2.githubusercontent.com/u/39101336?s=460&u=dfa8c0109052f69e39b4754279c34cc2a20063a6&v=4" width="100px;" alt=""/><br /><sub><b>Harriette Bianan</b></sub></a><br /><a href="https://github.com/itshally/wb-covid19" title="Reviewed Pull Requests and developer">💻🛠</a> </td>
-      <td align="center"><a href="https://kentcdodds.com"><img src="https://avatars1.githubusercontent.com/u/42638797?s=460&u=0690dec92c80e9ab0f3b09322272e1cc4cb3ba3f&v=4" width="100px;" alt=""/><br /><sub><b>krishna kakade</b></sub></a><br /><a href="https://github.com/itshally/wb-covid19" title="Reviewed Pull Requests and developer">💻🛠</a> </td>
+    <td align="center"><a href="https://github.com/itshally/"><img src="https://avatars2.githubusercontent.com/u/39101336?s=460&u=dfa8c0109052f69e39b4754279c34cc2a20063a6&v=4" width="100px;" alt=""/><br /><sub><b>Harriette Bianan</b></sub></a><br /><a href="https://github.com/itshally/wb-covid19" title="Reviewed Pull Requests and developer">💻🛠</a> </td>
+      <td align="center"><a href="https://github.com/krishnadevz/"><img src="https://avatars1.githubusercontent.com/u/42638797?s=460&u=0690dec92c80e9ab0f3b09322272e1cc4cb3ba3f&v=4" width="100px;" alt=""/><br /><sub><b>krishna kakade</b></sub></a><br /><a href="https://github.com/itshally/wb-covid19" title="Reviewed Pull Requests and developer">💻🛠</a> </td>
   </tr>
     </table>
 

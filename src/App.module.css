@@ -1,28 +1,23 @@
-body{
+body {
   background-color: #ffffff;
   width: 100%;
   padding: 0;
   margin: 0;
 }
-.container{
+
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 100%;
 }
-.logo{
-  height: 100px !important;
-  width: 100px !important;
+
+.hidden {
+  display: none;
 }
 
-#container{
-  background-color:lightgreen;
-  padding:10px;
-}
-
-.error{
-  display:none;
-  background-color:pink;
-  padding:10px;
+.exclusiveContainer {
+  width: 100%;
+  margin: auto;
 }

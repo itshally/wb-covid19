@@ -1,48 +1,87 @@
-.newsContainer{
+.newsContainer {
     margin: auto;
     padding-bottom: 5%;
     width: 100%;
+    max-width: 100%;
 }
-.newsHeader{
+
+.newsHeader {
     padding-bottom: 5px;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     width: auto;
 }
-h1{
+
+h2 {
     font-family: 'Lora', serif;
     padding-bottom: 2%;
 }
-.newsList{
+
+.newsList {
     list-style-type: none;
     width: auto;
     margin: 0;
     padding: 0% 5%;
 }
-.newsArticleContainer{
-  margin-top: 1px;
-  border-radius:4px;
-  width:auto;
-  height:auto;
-  box-shadow: 5px 5px 15px rgb(226,233,255,0.6), -5px -5px 15px  rgba(255,255,255, 0.5);
-  font-family: 'Quicksand', sans-serif;
+
+.newsArticleContainer {
+    margin-top: 1px;
+    border-radius: 4px;
+    width: auto;
+    height: auto;
+    box-shadow: 5px 5px 15px rgb(226, 233, 255, 0.6), -5px -5px 15px rgba(255, 255, 255, 0.5);
+    font-family: 'Quicksand', sans-serif;
 }
-.PanelSummary{
+
+.PanelSummary {
     text-align: center;
     margin: 1.5% auto;
 }
-.newsTitle{
+
+.newsTitle {
     font-family: 'Lora', serif;
-    color: #7aadff;
+    color: #488cff;
     font-size: 1.2em;
+    padding: 0 2em;
 }
-.expandedPanel{
+
+.expandedPanel {
     margin: 2% 5%;
 }
-.contentContainer{
+
+.contentContainer {
     width: 100%;
 }
-.newsContent{
+
+.newsContent {
     line-height: 1.8em;
     width: 100%;
+}
+
+#id {
+    width: auto;
+}
+
+
+@media screen and (max-width: 375px),
+(max-width: 640px) {
+    .newsContainer {
+        width: 100%;
+        margin: auto;
+        padding: 0;
+    }
+
+    .newsHeader {
+        padding: 0 1em;
+        margin: auto;
+    }
+
+    h2 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .newsTitle {
+        font-size: 1.2em;
+    }
 }

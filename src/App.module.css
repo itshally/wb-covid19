@@ -13,10 +13,6 @@ body {
   width: 100%;
 }
 
-.hidden {
-  display: none;
-}
-
 .exclusiveContainer {
   width: 100%;
   margin: auto;

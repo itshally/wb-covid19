@@ -10,7 +10,10 @@ if (document.monetization) {
 
 window.addEventListener('load', () => {
   if (!document.monetization) {
-    document.getElementById('state').innerText = 'Not enabled in browser'
+    document.getElementById('state').innerText = 'Not enabled in browser';
+    document.getElementById('exclusive').classList.add('hidden');
+    document.getElementById('stop-button').setAttribute('disabled', true);
+    document.getElementById('start-button').setAttribute('disabled', true);
   } else {
     showMonetizationState()
   }

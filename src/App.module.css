@@ -15,3 +15,14 @@ body{
   height: 100px !important;
   width: 100px !important;
 }
+
+#container{
+  background-color:lightgreen;
+  padding:10px;
+}
+
+.error{
+  display:none;
+  background-color:pink;
+  padding:10px;
+}

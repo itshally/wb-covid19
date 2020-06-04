@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./App.module.css";
+import './hide.css'
 import { Header, Cards, Chart, CountryPicker, ExclusiveContent, Footer } from "./components";
 import { fetchData } from "./api";
 import Buttons from './components/webmonetize/buttonmonetize'
@@ -24,7 +25,7 @@ class App extends React.Component {
 
   render() {
     const { data, country } = this.state;
-    
+
     return (
       <div className={styles.container}>
         <Header/>
@@ -41,7 +42,6 @@ class App extends React.Component {
       </div>
     );
   }
-  
 }
 
 export default App;

@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
     stopButton.disabled = true
     startButton.disabled = false
 
-    document.getElementById('exclusive').classList.add('hidden')
+    document.getElementById('exclusive').classList.add('hidden');
   })
 
   startButton.addEventListener('click', () => {
@@ -37,7 +37,6 @@ window.addEventListener('load', () => {
     stopButton.disabled = false
     startButton.disabled = true
 
-    document.getElementById('exclusive').classList.remove('hidden')
-
+    document.getElementById('exclusive').classList.remove('hidden');
   })
 })

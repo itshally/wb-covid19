@@ -15,6 +15,7 @@ then you are able to see news(exclusive content).
 
 ## Basic view of the app with out coil membership⤵
 <img src="https://github.com/itshally/wb-covid19/blob/master/basicviewofapp.gif" alt="basicview">
+<img src="https://github.com/itshally/wb-covid19/blob/master/Annotation%202020-06-09%20152200.png" alt="basidc">
 
 ## After enabling coil extension(With membership) view of app⤵
 <img src="https://github.com/itshally/wb-covid19/blob/master/Devtohackathon.gif" alt="firstview">

@@ -18,7 +18,7 @@ const Chart = ({ data: {confirmed, deaths, recovered}, country }) => { //error i
     confirmed ? (
       <Bar
         data={{
-          labels: ['Infected', 'Recovered', 'Deaths'],
+          labels: ['Confirmed', 'Recovered', 'Deaths'],
           datasets: [
             {
               label: 'People',
@@ -43,7 +43,7 @@ const Chart = ({ data: {confirmed, deaths, recovered}, country }) => { //error i
           labels: dailyData.map(({ date }) => date),
           datasets: [{
             data: dailyData.map(({confirmed}) => confirmed),
-            label: 'Infected',
+            label: 'Confirmed',
             borderColor: '#3333ff',
             fill: true,
           }, {

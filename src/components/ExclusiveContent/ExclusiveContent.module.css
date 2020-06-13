@@ -1,7 +1,7 @@
 .newsContainer {
     margin: auto;
     padding-bottom: 5%;
-    width: 100%;
+    width: 80%;
     max-width: 100%;
 }
 
@@ -46,7 +46,7 @@ h2 {
 }
 
 .expandedPanel {
-    margin: 2% 5%;
+    margin: -3% 5% 5% 5%;
 }
 
 .contentContainer {
@@ -56,6 +56,10 @@ h2 {
 .newsContent {
     line-height: 1.8em;
     width: 100%;
+}
+
+.newsContainer a {
+    text-decoration: none;
 }
 
 #id {

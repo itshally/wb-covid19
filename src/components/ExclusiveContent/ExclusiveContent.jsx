@@ -1,5 +1,7 @@
 import React, {Component} from "react";
-import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails } from "../../../node_modules/@material-ui/core";
+import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails } from "@material-ui/core";
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import styles from './ExclusiveContent.module.css'
 
 
@@ -89,7 +91,7 @@ export default class ExclusiveContent extends Component {
                             <div key={x.id} className={styles.newsArticleContainer}>
                                 <li>
                                 <ExpansionPanel>
-                                    <ExpansionPanelSummary>
+                                    <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                                         <div className={styles.PanelSummary}>
                                             <h3 className={styles.newsTitle}>{x.title}</h3> {/* news title */}
                                             <p>{x.pubDate}</p> {/* published date and time */}    

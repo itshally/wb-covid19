@@ -1,13 +1,15 @@
 .container {
   margin: 50px 0;
+  width: 90%;
 }
 
 .card {
-  margin: 0 2% !important;
+  margin: 1% !important;
   width: auto;
 }
 
 .total {
+  width: 100%;
   border-bottom: 10px solid rgba(0, 0, 255, 0.5);
 }
 

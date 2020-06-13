@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import { Button } from '@material-ui/core';
 import '../../wm-app'
 import styles from './buttonmonetize.module.css'
 
@@ -13,6 +13,10 @@ const useStyles = makeStyles((theme) => ({
     'padding-top' : '10px'
   },
 }));
+
+const handleChange = event => {
+  
+}
 
 export default function Buttons() {
   const classes = useStyles();

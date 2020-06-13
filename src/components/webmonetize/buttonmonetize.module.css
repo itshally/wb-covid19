@@ -6,8 +6,12 @@
 
  button:hover,
  button:hover{
-  border: none;
   background-color: #cccccc;
-  color: #666666;
+  color: #151515;
+}
+
+button:disabled{
+  color: #999999;
+  border: none;
   box-shadow: none !important;
 }

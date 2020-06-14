@@ -3,9 +3,12 @@
     text-align: center;
     font-weight: bold;
 }
+button{
+  margin: 0.5em !important;
+}
 
- button:hover,
- button:hover{
+button:hover,
+button:hover{
   background-color: #cccccc;
   color: #151515;
 }

@@ -1,6 +1,7 @@
 function showMonetizationState() {
   document.getElementById('state').innerText = document.monetization.state
 
+
   if(document.monetization.state === "pending"){
     console.log('still pending...')
   }else 
@@ -20,21 +21,26 @@ if (document.monetization) {
 }
 
 window.addEventListener('load', () => {
-  if (!document.monetization) {
-    document.getElementById('state').innerText = 'Not enabled in browser';
-    document.getElementById('exclusive').classList.add('hidden');
-  } else {
-    showMonetizationState()
-  }
-
+  
   const stopButton = document.getElementById('stop-button')
   const startButton = document.getElementById('start-button')
   const monetizationTag = document.querySelector('meta[name="monetization"]')
 
+  if (!document.monetization) {
+    document.getElementById('state').innerText = 'Not enabled in browser';
+    document.getElementById('ec-info').classList.remove('hidden');
+    document.getElementById('exclusive').classList.add('hidden');
+    stopButton.disabled = true
+    startButton.disabled = true
+  } else {
+    showMonetizationState()
+    document.getElementById('ec-info').classList.add('hidden');
+  }
+
+
   // stop button
   stopButton.addEventListener('click', () => {
     monetizationTag.remove()
-
     stopButton.disabled = true
     startButton.disabled = false
   })
@@ -42,7 +48,6 @@ window.addEventListener('load', () => {
   // start button
   startButton.addEventListener('click', () => {
     document.head.appendChild(monetizationTag)
-
     stopButton.disabled = false
     startButton.disabled = true
   })

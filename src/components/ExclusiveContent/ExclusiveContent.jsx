@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import { ExpansionPanel, ExpansionPanelSummary, ExpansionPanelDetails } from "@material-ui/core";
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import styles from './ExclusiveContent.module.css'
 
 

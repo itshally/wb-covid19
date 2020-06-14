@@ -1,3 +1,21 @@
-.hidden{
+.hidden {
     display: none;
+}
+
+.ecInfo {
+    font-family: 'Quicksand', sans-serif;
+    width: 90%;
+    margin: auto;
+    padding: 2em 0;
+    background-color: #ffe7e7;
+}
+
+.ecInfo a {
+    text-decoration: none;
+}
+
+.ecInfoText {
+    font-family: 'Quicksand', sans-serif;
+    width: 85%;
+    margin: auto;
 }

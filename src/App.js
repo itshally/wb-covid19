@@ -35,7 +35,7 @@ class App extends React.Component {
         <Buttons />
         <div className={styles.exclusiveContainer}>
           <div id="exclusive" className="hidden">
-            <ExclusiveContent /> 
+            <ExclusiveContent />
           </div>
         </div>
         <Footer />
